@@ -1,0 +1,205 @@
+<?php
+
+require 'koneksi.php';
+$camaba = query("SELECT * FROM buku");
+
+if (isset($_POST['cari'])) {
+  $camaba = cari($_POST['keyword']);
+}
+
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhillBooks.com</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container" id="navbar">
+      <div class="navbar-header">
+        <a href="#" class="navbar-brand navbar-link"></a>
+        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      </div>
+      <div class="collapse navbar-collapse" id="navcol-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li role="presentation"><a href="#home">HOME</a></li>
+          <li role="presentation"><a href="#buku">BOOKS</a></li>
+          <li role="presentation"><a href="#anggota">MEMBERS</a></li>
+          <li role="presentation"><a href="#"><i class="glyphicon glyphicon-search"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar -->
+
+  <!-- jumbotron -->
+  <div id="background">
+    <div class="jumbotron">
+      <p>Phill Book's is a private library that has been approved by various platforms from various countries.</p>
+      <h1>Phill Book's</h1>
+    </div>
+  </div>
+  <!-- jumbotron -->
+
+  <!-- container atas -->
+  <div id="home">
+    <div class="isi">
+      <div class="container atas">
+        <h1>Phill Book's</h1>
+        <div class="row">
+          <div class="col-lg-15 col-md-15 col-sm-12 col-xs-15">
+            <p class="text-justify"><strong>Phill Book's</strong> is a private library that has been approved by various platforms from various countries. Phil Book's is a library built by several young people from various regions in Indonesia which has been approved and recognized by various countries. This offline store, which is located in Central Jakarta, already has offline stores in several Asian and European countries. Phil Book's has a very diverse collection of books ranging from books about education, novels, comic books and others.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- container atas -->
+
+  <!-- container bawah -->
+  <div class="container bawah"> 
+    <br> <h1>Phill Book's</h1> <br> 
+    <div class="row">
+      <br> <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><img class="img-square" src="assets/img/perpus1.jpg" width="150px"> <br> <br> <img class="img-square" src="assets/img/perpus2.jpg" width="150px"> </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <br> <br> <h3>Address</h3>
+        <p class="text-center"><strong>Phill Book's Address</strong> Petamburan, Jakarta Pusat, Indonesia. 10260.</p>
+      </div>
+      <br> <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><img class="img-square" src="assets/img/perpus3.jpg" width="150px"> <br> <br> <img class="img-square" src="assets/img/perpus4.jpg" width="150px"> </div>
+    </div>
+  </div>
+  <!-- container bawah -->
+
+<br>
+<br>
+<br>
+  
+<!-- container buku -->
+  <div id="buku">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+          <div class="thumbnail"><img src="assets/img/buku.jpg">
+          <div class="caption">
+            <h3>Sejarah Kerajaan Kutai</h3>
+            <p class="text-justify">Buku ini Bercerita tentang pembangunan daerah dengan menguraikan latar belakang dan keterkaitan Kutai Lama dengan pusat-pusat kota kuno kerajaan Kutai Kartanegara, mengidentifikasi sumber daya yang dapat dikembangkan sebagai aset daerah, pusat-pusat kerajaan Nusantara yang semasa sebagai referensi dalam melakukan rekonstruksi Pusat Kerajaan Kutai Kartanegara Abad XIII XVII.</p>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+          <div class="thumbnail"><img src="assets/img/buku.jpg">
+          <div class="caption">
+            <h3>Sosiologi</h3>
+            <p class="text-justify">Masalah dalam pendidikan ilmu sosial di Indonesia ialah terabaikannya penggunaan konsep dan teori ilmu sosial ke dalam kehidupan sehari-hari. Padahal, keterkaitan konsep dan praktik sangat dibutuhkan oleh pemelajar (mahasiswa, dll) pemula.  Hubungan antara teori dan praktik diuraikan berdasarkan kasus konkret. Kasus yang dipilih adalah hubungan antara praktik relasi sosial dalam pembangunan di satu pihak, dan teori Sosiologi di pihak lain. </p>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+          <div class="thumbnail"><img src="assets/img/buku.jpg">
+          <div class="caption">
+            <h3>Dear Nathan</h3>
+            <p class="text-justify">Berawal dari keterlambatan mengikuti upacara pertama di sekolah baru, Salma Alvira bertemu dengan seorang cowok yang membantunya menelusup lewat gerbang samping. Selidik punya selidik, cowok itu ternyata bernama Nathan; murid nakal yang sering jadi bahan gosip anak satu sekolah. Beberapa rangkaian kejadian pun terjadi, yang justru menghantarkan Salma untuk menjadi kian lebih dekat dengan Nathan. Dua kepribadian yang saling bertolak belakang, seperti langit dan bumi; yang tidak bisa bersatu tapi saling melengkapi. Novel ini mengisahkan tentang masa indah putih abu-abu, persahabatan, pelajaran kehidupan, dan pentingnya untuk selalu menghargai perasaan.</p>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+          <div class="thumbnail"><img src="assets/img/buku.jpg">
+          <div class="caption">
+            <h3>Amor Fati</h3>
+            <p class="text-justify">“Kita pernah menjadi sebuah ketentuan pada pertemuan yang saling mengisi hingga saling meniadakan. Namun pada langkah yang saling menjauhi, ketentuan terasa seperti sebuah perjudian antara waktu dengan detaknya sendiri. Karena pada detik ke sekian kita sadar bahwa penerimaan akan membuat kita merasa utuh jika sudah sepenuhnya.”</p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- container buku -->
+
+  <h3><i class="fas fa-users"></i> Books </h3>
+  <hr>
+<!-- pencarian data -->
+      <form action="" method="POST">
+        <input type="text" id="keyword" size="50" name="keyword" placeholder="masukkan keyword" autocomplete="off">
+        <button type="submit" class="btn btn-primary" name="cari"> Cari </button>
+      </form>
+
+      <br>
+      <hr>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Nama Buku</th>
+            <th scope="col">stok</th>
+            <th scope="col">tanggal pinjam</th>
+            <th scope="col">tanggal balik</th>
+            <th scope="col">Opsi</th>
+          </tr>
+        </thead>
+        <?php if (empty($camaba)) : ?>
+          <tr>
+            <td colspan="4" class="alert alert-danger text-center" role="alert">
+              <p><b>Mahasiswa tidak ditemukan</b></p>
+            </td>
+          </tr>
+        <?php endif; ?>
+        <tbody>
+          <?php $no = 1; ?>
+          <?php foreach ($camaba as $cmb) : ?>
+            <tr>
+              <th scope="row"><?php echo $no ?></th>
+              <td><?php echo $cmb['judul_buku']; ?></td>
+              <td><?php echo $cmb['stok']; ?></td>
+              <td><?php echo $cmb['tgl_pinjam']; ?></td>
+              <td><?php echo $cmb['tgl_balik']; ?></td>
+              <td><a href="detail.php?id=<?= $cmb['id'];  ?>" class="btn btn-warning" role="button">detail</a></td>
+            </tr>
+            <?php $no++ ?>
+          <?php endforeach ?>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <!-- about -->
+  <div id="about">
+    <div class="container footer">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <h2>About Us</h2>
+        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus...</p>
+      </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <h2>Newsletter Subscription</h2>
+          <div class="input-group input-group-lg">
+            <input type="text" class="form-control" value="Your Email">
+            <div class="input-group-btn">
+              <button class="btn btn-primary" type="submit">Subscribe </button>
+            </div>
+          </div>
+          <div id="icon"><i class="fa fa-instagram"></i><i class="fa fa-facebook-official"></i><i class="fa fa-twitter-square"></i><i class="fa fa-youtube-play"></i></div>
+        </div>
+    </div>
+  </div>
+  <!-- about -->
+
+  <!-- kaki -->
+  <div id="kaki">
+    <div class="container">
+      <h5 class="text-center">iCONIC. © 2018</h5>
+    </div>
+  </div>
+  <!-- kaki -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
